@@ -16,6 +16,7 @@ body {
     line-height: 1.5;
     position: relative;
 
+
     
 }
 
@@ -64,7 +65,12 @@ h1, h2, h3, h4, p, .tag{
   font-style: italic;
 }
 
-
+@font-face {
+    font-family: "Apoc-Normal";
+    src: url("../font/apoc-trial/Apoc-Sans-Trial-Light.otf");
+    font-weight: 300;
+    font-style: normal;
+}
 
 
 
@@ -111,7 +117,7 @@ header {
 
 
 .header-width{
-   width:65% ;
+    width:65% ;
     margin: auto;
 }
 
@@ -125,7 +131,7 @@ header {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: -0.2px;
-    font-family: "Space Mono", monospace;
+    font-family: "Apoc-Normal", "Space Mono", monospace;
     text-align: left;
 }
 
@@ -158,6 +164,59 @@ nav ul li a:hover {
     color: #555; /* Subtle color change on hover */
 }
 
+
+
+
+/*text scrolling banner */
+/* Infinite scrolling text banner */
+.scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+/*    background-color: #000;*/
+    margin-top: 4em;
+    margin-bottom: 0;
+    padding: 0.8rem 0;
+    background: rgb(201,169,254);
+    background: linear-gradient(90deg, rgba(201,169,254,1) 0%, rgba(195,35,255,1) 34%, rgba(120,0,235,1) 100%);
+
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 10s linear infinite;
+    color: #fff;
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
+
+.scrolling-text span {
+    margin: 0 0.1rem;
+/*    font-family: "Space Mono", monospace;*/
+    font-family: "Apoc-Normal", "Space Mono", monospace;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Adjust page-title margin since we added the scrolling text */
+.page-title {
+    margin-top: 1em;
+}
+
+
+
+/*------------------------*/
+
+
 .page-title {
 /*    padding: 4rem 2rem 2rem;*/
     text-align: left;
@@ -170,9 +229,10 @@ nav ul li a:hover {
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    font-family: "Space Mono", monospace;
+   font-family: "Apoc-Normal", "Space Mono", monospace;
     line-height:1em;
     text-align: left;
+    font-size:5em;
 
 }
 
@@ -449,6 +509,9 @@ footer {
     padding: 3rem 2rem;
     background-color: #f8f8f8;
     margin-top: 3rem;
+    /*background: rgb(201,169,254);
+    background: linear-gradient(90deg, rgba(201,169,254,1) 0%, rgba(195,35,255,1) 34%, rgba(120,0,235,1) 100%);*/
+
 }
 
 .footer-content {
@@ -887,7 +950,7 @@ body.no-scroll {
     }
     
     .page-title h1 {
-        font-size: 2rem;
+        font-size: 5em;
     }
 }
 
